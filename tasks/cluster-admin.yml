@@ -1,0 +1,8 @@
+- name: Get list of cluster-admin role-bindings
+  command: oc get clusterrolebinding cluster-admins --template {{ "'{{ range .subjects }}{{ .kind }}:{{ .name }}" ~ '{{ "\n" }}' ~ "{{ end }}'" }}
+  register: custer_admin_role_bindings
+  changed_when: false
+
+- name: Add cluster-admin role to adminuser
+  command: oadm policy add-cluster-role-to-user cluster-admin adminuser
+  when: "'User:adminuser' not in custer_admin_role_bindings.stdout_lines"

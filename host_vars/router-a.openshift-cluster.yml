@@ -1,0 +1,4 @@
+openshift_hostname: router-a.openshift-cluster
+openshift_node_labels:
+  region: router
+  zone: us-west-2a

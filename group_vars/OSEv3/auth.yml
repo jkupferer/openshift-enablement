@@ -1,0 +1,11 @@
+openshift_master_identity_providers:
+- name: htpasswd_auth
+  login: true
+  challenge: true
+  kind: HTPasswdPasswordIdentityProvider
+  filename: /etc/origin/master/htpasswd
+
+openshift_master_htpasswd_users:
+  adminuser: '$apr1$vr3yMggg$v8qPGgHd5I0.xGeINX.zt/'
+  alice: '$apr1$JMlvJOt6$aSYaQHQS5Ei3m98GxUYaP1'
+  bob: '$apr1$y3iAI0oE$.7m4vtNA6k0Q/85mfmFaI1'

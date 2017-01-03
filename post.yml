@@ -1,0 +1,5 @@
+- name: Cluster setup post tasks
+  hosts: masters[0]
+  tasks:
+
+  - include: tasks/cluster-admin.yml

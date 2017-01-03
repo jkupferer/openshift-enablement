@@ -1,0 +1,4 @@
+openshift_hostname: node-b1.openshift-cluster
+openshift_node_labels:
+  region: primary
+  zone: us-west-2b

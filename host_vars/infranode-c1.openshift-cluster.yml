@@ -1,0 +1,4 @@
+openshift_hostname: infranode-c1.openshift-cluster
+openshift_node_labels:
+  region: infra
+  zone: us-west-2c
